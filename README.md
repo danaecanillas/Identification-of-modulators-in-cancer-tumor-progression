@@ -1,4 +1,4 @@
-# Identification-of-modulators-in-cancer-tumor-progression
+# Identification of modulators in cancer tumor progression
 
 **Author**: Dànae Canillas Sánchez
 
