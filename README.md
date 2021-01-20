@@ -20,8 +20,6 @@
 
 ### Virtual environment setup
 
-**1. Create a virtual environment on your local repository**
-
 Check you have Python 3 version:
 
 ```py
@@ -29,7 +27,7 @@ $ python3 --version
 Python 3.6.2
 ```
 
-**2. Activate it to install packages and to execute scripts (ALWAYS!)**
+**1. Activate it to install packages and to execute scripts (ALWAYS!)**
 
 ```
 $ source ./venv/bin/activate
@@ -44,7 +42,7 @@ $ deactivate
 
 
 
-**3. Install `requirements.txt`**
+**2. Install `requirements.txt`**
 
 With the environment activated:
 
@@ -54,7 +52,7 @@ With the environment activated:
 
 
 
-**4. Add new packages to the project, if needed**
+**3. Add new packages to the project, if needed**
 
 ```
 (venv) $ pip install new_package_name
