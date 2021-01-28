@@ -16,6 +16,12 @@
 
 ## Description
 
+The main objective of this research is to provide information on the relevance of different pathways or genetic expressions for the development of breast cancer, for the relapse of patients suffering from it and the incidence of death. 
+
+- Identify correlations between the most relevant pathways or genetic expressions when influencing the progression of breast cancer tumor.
+- Provide a predictor model of relapse time and / or death time count from the first diagnosis.
+- Identify the most relevant pathways in each breast cancer subtypes. 
+
 ## Usage
 
 ### Virtual environment setup
