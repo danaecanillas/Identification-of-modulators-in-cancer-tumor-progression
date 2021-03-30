@@ -8,7 +8,10 @@ __pycache__/
 
 # Distribution / packaging
 .Python
-data/
+img/
+src/data/IDIBELL
+src/data/Description_TCGAdataset.pdf
+src/deprecated
 build/
 develop-eggs/
 dist/
