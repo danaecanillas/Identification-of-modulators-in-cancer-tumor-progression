@@ -52,6 +52,8 @@ PATHWAYS:
 - stage
 - lymph_nodes_positive
 - Treatment
+- TP53.mut
+- PIK3CA.mut
 - NPI
 - CELLULARITY
 - INTCLUST
