@@ -1,4 +1,4 @@
-import sys
+import os, sys
 import pandas as pd
 from functools import reduce
 
@@ -8,10 +8,10 @@ GENERATED_FOLDER = "data/generated/"
 def get_data():
     '''
     Function that collects all the data provided by IDIBELL.
-    Generates several files that contain subsets of variables, 
-    a file with the entire dataset, 
-    the data split in train and test for training 
-    and a descriptive file with the variables used. 
+    Generates several files that contain (1) subsets of variables, 
+    (2) a file with the entire dataset, 
+    (3) the data split in train and test for training 
+    (4) and a descriptive file with the variables used. 
 
     [OUTPUT]:
     - data/generated/aux/immune_cells.csv
@@ -84,10 +84,17 @@ def get_data():
     
     # Split into train/test
     df = entire_data.replace({'PAM50': {"Normal": "NC"}})
-    test = df[df["PAM50"] == "NC"]
-    train = df[df["PAM50"] != "NC"]
-    print("[INFO]: Saving " + GENERATED_FOLDER + "test.csv")
-    test.to_csv(GENERATED_FOLDER + "test.csv",index=False)
+    M1_predict = df[df["PAM50"] == "NC"]
+    M2_predict = df[(df["RFSE"].isna()) | (df["DSSE10"].isna())]
+    train = df[(df["PAM50"] != "NC") & (df["RFSE"].notna()) & (df["DSSE10"].notna())]
+
+    # Dataset that belongs to the Normal class - not classified
+    print("[INFO]: Saving " + GENERATED_FOLDER + "M1_predict.csv")
+    M1_predict.to_csv(GENERATED_FOLDER + "M1_predict.csv",index=False)
+    # Non-target samples
+    print("[INFO]: Saving " + GENERATED_FOLDER + "M2_predict.csv")
+    M2_predict.to_csv(GENERATED_FOLDER + "M2_predict.csv",index=False)
+
     print("[INFO]: Saving " + GENERATED_FOLDER + "train.csv")
     train.to_csv(GENERATED_FOLDER + "train.csv",index=False)
 

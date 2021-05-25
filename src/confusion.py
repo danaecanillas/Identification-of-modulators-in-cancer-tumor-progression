@@ -223,6 +223,9 @@ def plot_confusion_matrix_from_data(y_test, predictions, columns=None, annot=Tru
 def cm(matrix):
     #get pandas dataframe
     df_cm = DataFrame(matrix, index=["Basal", "Her2", "LumA", "LumB"], columns=["Basal", "Her2", "LumA", "LumB"])
+    #df_cm = DataFrame(matrix, index=["0", "1"], columns=["0", "1"])
+    #df_cm = DataFrame(matrix, index=["[0-2999]", "[3000-5999]", "[6000-9999]"], columns=["[0-2999]", "[5000-4999]", "[6000-9999]"])
+
     #colormap: see this and choose your more dear
     cmap = 'PuRd'
     pretty_plot_confusion_matrix(df_cm, cmap=cmap)
