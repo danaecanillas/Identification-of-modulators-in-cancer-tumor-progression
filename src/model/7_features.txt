@@ -1,0 +1,154 @@
+
+[PARAMETERS]:
+{'lr': 0.001, 'epochs': 80, 'batch_size': 100, 'fc1': 200, 'fc2': 120, 'fc3': 84, 'dropout': 0.2}
+--------------------------------
+FOLD 1
+--------------------------------
+| epoch 020 | loss=8.66
+--- %s seconds --- 0.817
+    - Training accuracy   = 77.1%
+    - Validation accuracy = 74.7% 
+
+| epoch 040 | loss=7.17
+--- %s seconds --- 1.65
+    - Training accuracy   = 81.7%
+    - Validation accuracy = 77.7% 
+
+| epoch 060 | loss=6.87
+--- %s seconds --- 2.56
+    - Training accuracy   = 82.4%
+    - Validation accuracy = 79% 
+
+| epoch 080 | loss=5.83
+--- %s seconds --- 3.27
+    - Training accuracy   = 83.9%
+    - Validation accuracy = 80.3% 
+
+Training process has finished.
+-> Saving trained model: /model/model-fold-1.pth
+
+Accuracy for fold 1: 80.319149 % 
+
+--------------------------------
+FOLD 2
+--------------------------------
+| epoch 020 | loss=8.36
+--- %s seconds --- 0.676
+    - Training accuracy   = 78%
+    - Validation accuracy = 79% 
+
+| epoch 040 | loss=7.56
+--- %s seconds --- 1.31
+    - Training accuracy   = 80.1%
+    - Validation accuracy = 80.1% 
+
+| epoch 060 | loss=6.28
+--- %s seconds --- 2.11
+    - Training accuracy   = 82.5%
+    - Validation accuracy = 79.5% 
+
+| epoch 080 | loss=6.37
+--- %s seconds --- 2.81
+    - Training accuracy   = 83.2%
+    - Validation accuracy = 80.3% 
+
+Training process has finished.
+-> Saving trained model: /model/model-fold-2.pth
+
+Accuracy for fold 2: 80.319149 % 
+
+--------------------------------
+FOLD 3
+--------------------------------
+| epoch 020 | loss=8.44
+--- %s seconds --- 0.621
+    - Training accuracy   = 77.2%
+    - Validation accuracy = 77.1% 
+
+| epoch 040 | loss=7.99
+--- %s seconds --- 1.26
+    - Training accuracy   = 81.2%
+    - Validation accuracy = 79.5% 
+
+| epoch 060 | loss=6.59
+--- %s seconds --- 2
+    - Training accuracy   = 82.9%
+    - Validation accuracy = 77.1% 
+
+| epoch 080 | loss=6.03
+--- %s seconds --- 2.67
+    - Training accuracy   = 83.9%
+    - Validation accuracy = 78.7% 
+
+Training process has finished.
+-> Saving trained model: /model/model-fold-3.pth
+
+Accuracy for fold 3: 78.723404 % 
+
+--------------------------------
+FOLD 4
+--------------------------------
+| epoch 020 | loss=8.5
+--- %s seconds --- 0.652
+    - Training accuracy   = 77.8%
+    - Validation accuracy = 78.7% 
+
+| epoch 040 | loss=7.87
+--- %s seconds --- 1.36
+    - Training accuracy   = 81.7%
+    - Validation accuracy = 80.3% 
+
+| epoch 060 | loss=6.18
+--- %s seconds --- 2.09
+    - Training accuracy   = 83%
+    - Validation accuracy = 80.1% 
+
+| epoch 080 | loss=7.52
+--- %s seconds --- 2.78
+    - Training accuracy   = 82%
+    - Validation accuracy = 79.3% 
+
+Training process has finished.
+-> Saving trained model: /model/model-fold-4.pth
+
+Accuracy for fold 4: 79.255319 % 
+
+--------------------------------
+FOLD 5
+--------------------------------
+| epoch 020 | loss=8.62
+--- %s seconds --- 0.61
+    - Training accuracy   = 76.8%
+    - Validation accuracy = 73.9% 
+
+| epoch 040 | loss=7.68
+--- %s seconds --- 1.23
+    - Training accuracy   = 80.5%
+    - Validation accuracy = 76.6% 
+
+| epoch 060 | loss=6.55
+--- %s seconds --- 1.89
+    - Training accuracy   = 83.2%
+    - Validation accuracy = 77.4% 
+
+| epoch 080 | loss=5.59
+--- %s seconds --- 2.56
+    - Training accuracy   = 84.6%
+    - Validation accuracy = 79.3% 
+
+Training process has finished.
+-> Saving trained model: /model/model-fold-5.pth
+
+Accuracy for fold 5: 79.255319 % 
+
+--------------------------------
+K-FOLD CROSS VALIDATION RESULTS FOR 5 FOLDS
+--------------------------------
+- Fold 1: 80.31914893617021 %
+- Fold 2: 80.31914893617021 %
+- Fold 3: 78.72340425531915 %
+- Fold 4: 79.25531914893617 %
+- Fold 5: 79.25531914893617 %
+--------------------------------
+Average: 79.57446808510637 %
+--------------------------------
