@@ -20,19 +20,23 @@ Data Science and Engineering (UPC)
 
 To execute the app, follow the next steps:
 
-1. Activate the environment:
+1. Create an environment:
+```py
+$ virtualenv venv
+```
+2. Activate the environment:
 ```py
 $ source ./venv/bin/activate
 (venv) @Username/:
 ```
 
-2. Install `requirements.txt`**
+3. Install `requirements.txt`
 
 ```
 (vesper_env) $ pip install -r requirements.txt 
 ```
 
-3. Execute the application:
+4. Execute the application:
 ```py
 $ cd app
 $ python3 app.py
