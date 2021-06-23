@@ -13,20 +13,15 @@ import dash_core_components as dcc
 
 DATA_PATH = "data/clean_train.csv"
 
-
-
 def dim_tab():
     df = pd.read_csv(DATA_PATH)
-    features = ['B cells naive', 'B cells memory', 'Plasma cells', 'T cells CD8',
-      'T cells CD4 naive', 'T cells CD4 memory resting',
-      'T cells CD4 memory activated', 'T cells follicular helper',
-      'T cells regulatory (Tregs)', 'T cells gamma delta', 'NK cells resting',
-      'NK cells activated', 'Monocytes', 'Macrophages M0', 'Macrophages M1',
-      'Macrophages M2', 'Dendritic cells resting',
-      'Dendritic cells activated', 'Mast cells resting',
-      'Mast cells activated', 'Eosinophils', 'Neutrophils', 'Cell_Cycle',
-      'HIPPO', 'MYC', 'NOTCH', 'NRF2', 'PI3K', 'TGF.Beta', 'RTK_RAS', 'TP53',
-      'WNT', 'Hypoxia', 'SRC', 'ESR1', 'ERBB2', 'PROLIF','stage','grade','PAM50']
+    features = ['B cells naive', 'B cells memory', 'Plasma cells', 'T cells CD8','T cells CD4 naive',
+     'T cells CD4 memory resting','T cells CD4 memory activated', 'T cells follicular helper',
+     'T cells regulatory (Tregs)', 'T cells gamma delta', 'NK cells resting','NK cells activated',
+      'Monocytes', 'Macrophages M0', 'Macrophages M1','Macrophages M2', 'Dendritic cells resting',
+      'Dendritic cells activated', 'Mast cells resting','Mast cells activated', 'Eosinophils',
+       'Neutrophils', 'Cell_Cycle','HIPPO', 'MYC', 'NOTCH', 'NRF2', 'PI3K', 'TGF.Beta', 'RTK_RAS',
+        'TP53','WNT', 'Hypoxia', 'SRC', 'ESR1', 'ERBB2', 'PROLIF','stage','grade','PAM50']
 
     return  html.Div([html.Br(),
                 html.Div([
