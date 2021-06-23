@@ -348,7 +348,8 @@ def render_content(tab):
                     html.Div([    
                         html.Div([                             
                         ], className="six columns" , style={'width':'5%','text-align':'center'}),
-                        html.Div([              
+                        html.Div([   
+                            html.Br(),html.Br(),           
                             html.H2("Pathways"),
                             html.P("Select a set of pathways"),
                             dcc.Dropdown(
@@ -357,18 +358,7 @@ def render_content(tab):
                                 value=pathways,
                                 multi=True,
                             ),
-                            html.Br(),
-                            html.P("Two-way hierarchical clustering:"),
-                            dcc.Checklist(
-                            id='pathway_dendogram',
-                            options=[
-                                {'label': 'Pathway Clustering', 'value': 'pathway'},
-                            ]),
-                            dcc.Checklist(
-                            id='patient_dendogram',
-                            options=[
-                                {'label': 'Patient Clustering', 'value': 'patient'},
-                            ])
+                            html.Br(), html.Br(), html.Br(),
                         ], className="six columns" , style={'width':'20%'}),
                         html.Div([                             
                         ], className="six columns" , style={'width':'5%','text-align':'center'}),
@@ -382,7 +372,8 @@ def render_content(tab):
                     html.Div([    
                         html.Div([                             
                         ], className="six columns" , style={'width':'5%','text-align':'center'}),
-                        html.Div([              
+                        html.Div([  
+                            html.Br(),html.Br(),             
                             html.H2("Immune cells"),
                             html.P("Select a set of immune cells"),
                             dcc.Dropdown(
@@ -391,18 +382,8 @@ def render_content(tab):
                                 value=cells,
                                 multi=True,
                             ),
-                            html.Br(),
-                            html.P("Two-way hierarchical clustering:"),
-                            dcc.Checklist(
-                            id='pathway_dendogram',
-                            options=[
-                                {'label': 'Pathway Clustering', 'value': 'pathway'},
-                            ]),
-                            dcc.Checklist(
-                            id='patient_dendogram',
-                            options=[
-                                {'label': 'Patient Clustering', 'value': 'patient'},
-                            ]) 
+                            html.Br(), html.Br(), html.Br(),
+                            
                         ], className="six columns" , style={'width':'20%'}),
                         html.Div([                             
                         ], className="six columns" , style={'width':'5%','text-align':'center'}),
@@ -456,7 +437,7 @@ def render_content(tab):
                         #], className="six columns" , style={'padding':10,'width':'5%','text-align':'center'})
                     #], className="row", style=dict(display='flex'))
                 #])
-        return
+        return html.H1("Under Construction 🚧")
     elif tab == 'model1':
         return shap_tab()
     
