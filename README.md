@@ -1,8 +1,10 @@
 # Identification of modulators in cancer tumor progression
 
+Data Science and Engineering (UPC)
+
 **Author**: Dànae Canillas Sánchez
 
-*Universitat Politècnica de Catalunya, UPC*
+
 
 
 ## Table of Contents
