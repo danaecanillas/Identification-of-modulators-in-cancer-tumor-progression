@@ -1,0 +1,40 @@
+# Fer un sample!!!!
+
+@app.callback(
+	Output('my-clustergram', 'children'),
+	[Input('select_pathways', 'value')])
+def update_clustergram(values):
+    data = pd.read_csv('data/clean_train.csv')
+    indx = []
+    for patient in range(len(data)):
+        indx.append(data.iloc[patient]['PAM50'] + " - ")
+
+    id = indx + data['submitter']
+    df = data.set_index([id]).sort_index()
+
+    df3 = df[values].transpose()
+
+    columns = list(df3.columns.values)
+    rows = list(df3.index)
+
+    if len(values) < 2:
+        return "Please select at least two rows to display."
+
+    return dcc.Graph(figure=dashbio.Clustergram(
+        data = df3.values,    
+        column_labels=columns,
+        row_labels=rows,
+        color_threshold={
+            'row': 250,
+            'col': 700
+        },
+        width=2000,
+        height=600,
+        display_ratio=[0, 0.1],
+        paper_bg_color="LightSteelBlue",
+        tick_font = {'size':10}
+    ))
+    
+    
+    
+    html.Div(id='my-clustergram'),
