@@ -25,4 +25,4 @@ def extract_shap(model, features):
     list_of_tensors = torch.FloatTensor(X)
 
     shap_values = e.shap_values(list_of_tensors)
-    np.save("shap_test.npy", shap_values)
+    np.save("shap_values.npy", shap_values)
