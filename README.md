@@ -33,11 +33,10 @@ $ source ./venv/bin/activate
 3. Install `requirements.txt`
 
 ```
-(vesper_env) $ pip install -r requirements.txt 
+(venv) $ pip install -r requirements.txt 
 ```
 
 4. Execute the application:
 ```py
-$ cd app
-$ python3 app.py
+$ cd app && python3 app.py
 ```
